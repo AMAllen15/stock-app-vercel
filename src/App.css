@@ -1,0 +1,375 @@
+/*  Write your styles here  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Oxygen, sans-serif;
+}
+.slider {
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 0.9rem;
+  font-size: medium;
+}
+.slider div {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 25s linear infinite;
+}
+.slider div span {
+  padding-left: 15px;
+}
+.slider-market-raw {
+  margin-right: 20px;
+  color: black;
+}
+.slider-name {
+  color: #191970;
+  font-weight: bold;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+.header {
+  background-color: #4c4cff; /* Adjusted to match the screenshot's color */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.header-title {
+  color: white;
+  font-weight: bold;
+}
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Adjusted height */
+}
+.cards_title {
+  color: black;
+  margin-left: 30px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  gap: 2rem;
+  justify-content: center;
+}
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px #e1e5ee;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+}
+.card_body {
+  text-align: center;
+}
+.card_title {
+  padding: 1rem;
+}
+.card_btn {
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem;
+  border: 2px solid #d50000;
+  background: transparent;
+  color: #d50000;
+  border-radius: 0.2rem;
+  transition: background 200ms ease-in, color 200ms ease-in;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card:hover .card_btn {
+  background: #d50000;
+  color: white;
+}
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 140%;
+  background-color: black;
+  height: 1px;
+}
+.stock-row {
+  text-align: center;
+}
+.stock-column-data {
+  margin-top: 6rem;
+}
+.summary-span {
+  color: #191970;
+  font-weight: bold;
+}
+.stock-headings {
+  margin-top: 2.7rem;
+}
+.stock-column-chart {
+  padding: 10px;
+  text-align: center;
+}
+.chart-true {
+  background-color: #ffcccc;
+  border: 1px solid red;
+}
+.nav-link {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #a5a5ff; /* A lighter purple for hover state */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background: #f8f9fa; /* Adjust this color to fit your design */
+}
+
+.search-form {
+  width: 100%;
+  max-width: 960px; /* Can adjust based on your preference */
+}
+
+.search-input-container {
+  display: flex;
+  width: 100%;
+}
+
+.search-input {
+  flex-grow: 1; /* Takes up the available space */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #ddd; /* Light grey border */
+  border-right: none; /* Integrate with the button */
+  border-radius: 5px 0 0 5px; /* Rounds the left side of the input */
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #007bff; /* Bootstrap primary color for focus */
+}
+
+.search-button {
+  padding: 10px 16px;
+  background-color: #007bff; /* Bootstrap primary color */
+  border: 2px solid #007bff;
+  color: white;
+  border-radius: 0 5px 5px 0; /* Rounds the right side of the button */
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: #0056b3; /* Darker shade on hover/focus */
+  border-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .search-button {
+    padding: 10px;
+  }
+}
+
+.news-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the news section */
+}
+
+.news-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Adjust the spacing between cards */
+  justify-content: center;
+}
+
+.news-card {
+  border: 1px solid #ddd; /* Light border for the card */
+  border-radius: 5px; /* Rounds the corners */
+  padding: 15px; /* Inner spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #fff; /* White background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.news-card-title {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.news-card-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.news-read-more {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border: 1px solid #ff4500; /* Your button border color */
+  color: #ff4500; /* Your button text color */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-read-more:hover,
+.news-read-more:focus {
+  background-color: #ff4500; /* Color changes on hover */
+  color: #fff; /* Text color changes on hover */
+  text-decoration: none; /* Prevents underline on hover */
+}
+
+.news-card:hover,
+.news-card:focus {
+  transform: translateY(-5px); /* Lifts the card slightly on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+  }
+}
+/* ChatPage styles */
+.chat-page {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.chat-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.chat-description {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Chat component styles */
+.chat-container {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container input[type="text"] {
+  padding: 10px;
+  margin: 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: calc(100% - 100px); /* Leave space for button */
+}
+
+.chat-container button {
+  padding: 10px 20px;
+  margin: 0.5rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-container button:hover {
+  background-color: #0056b3;
+}
+
+.room-list {
+  margin-bottom: 1rem;
+}
+
+.room-list > div {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.messages {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.messages > div {
+  margin-bottom: 10px;
+}
+
+.chat-container input[type="file"] {
+  border: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* You can add media queries for responsiveness if needed */
+@media (max-width: 768px) {
+  .chat-container input[type="text"],
+  .chat-container button {
+    width: 100%; /* Full width for mobile */
+    margin: 0.5rem 0; /* Stack elements on mobile */
+  }
+}
